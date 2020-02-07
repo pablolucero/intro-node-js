@@ -1,4 +1,4 @@
-window.App = window.App || {}
+window.App = window.App || {};
 
 window.App.showPostsForCurrentUser = (userId, cb) => {
   window.App.getPostsForUser(userId, posts => {
@@ -9,10 +9,10 @@ window.App.showPostsForCurrentUser = (userId, cb) => {
         ${post.body}
         ${post.createdBy}
       </div>`
-    })
+    });
     cb(postTemplates)
   })
-}
+};
 
 window.App.showUserProfile = (userId, cb) => {
   window.App.getUserById(userId, user => {
@@ -20,9 +20,9 @@ window.App.showUserProfile = (userId, cb) => {
       <div>
         ${user.name}
       </div>
-    `
+    `;
     cb(user)
   })
-}
+};
 
 
